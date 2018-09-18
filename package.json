@@ -4,7 +4,7 @@
   "license": "ISC",
   "author": "Buster Collings <busterc@gmail.com>",
   "homepage": "https://github.com/busterc/lodash-pickapart",
-  "repository": "busterc/pickapart",
+  "repository": "busterc/lodash-pickapart",
   "version": "0.0.0",
   "main": "dist/lodash-pickapart.cjs.js",
   "module": "dist/lodash-pickapart.esm.js",
