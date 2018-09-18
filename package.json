@@ -1,0 +1,100 @@
+{
+  "name": "lodash-pickapart",
+  "description": "lodash mixin for deep immutable destructuring with omit",
+  "license": "ISC",
+  "author": "Buster Collings <busterc@gmail.com>",
+  "homepage": "https://github.com/busterc/lodash-pickapart",
+  "repository": "busterc/pickapart",
+  "version": "0.0.0",
+  "main": "dist/lodash-pickapart.cjs.js",
+  "module": "dist/lodash-pickapart.esm.js",
+  "browser": "dist/lodash-pickapart.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist; NODE_ENV=production rollup -c",
+    "precommit": "lint-staged",
+    "pretest": "eslint lib",
+    "test": "NODE_ENV=test jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-json": "^1.2.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "jest": "^23.5.0",
+    "lint-staged": "^7.2.2",
+    "lodash": "^4.17.11",
+    "prettier": "^1.11.1",
+    "prettier-package-json": "^2.0.0",
+    "rollup": "^0.66.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  },
+  "keywords": [
+    "at",
+    "destructure",
+    "destructuring",
+    "immutable",
+    "lodash",
+    "lodash-mixin",
+    "mixin",
+    "omit",
+    "pick"
+  ],
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "printWidth": 90
+        }
+      ]
+    },
+    "plugins": [
+      "prettier",
+      "json"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ]
+  },
+  "reveal": true
+}
