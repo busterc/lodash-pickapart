@@ -5,7 +5,7 @@
   "author": "Buster Collings <busterc@gmail.com>",
   "homepage": "https://github.com/busterc/lodash-pickapart",
   "repository": "busterc/lodash-pickapart",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/lodash-pickapart.cjs.js",
   "module": "dist/lodash-pickapart.esm.js",
   "browser": "dist/lodash-pickapart.js",
